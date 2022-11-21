@@ -7,27 +7,38 @@ body {
 
 .navigation {
     background-color:  #212c25;
+<<<<<<< HEAD
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
+=======
+    overflow: hidden;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.current-navigation {
+    background-color: #ddd;
+    color: #0101016a;
+>>>>>>> 467a1b18492c4417faab0736510cb9e74eebf50d
 }
 
 .navigation a {
     display: block;
     float: left;
-    padding: 1%;
-    font-size: 30px;
+    padding: 0.5%;
+    font-size: 20px;
     margin: 0;
     color: #38bda9;
     text-decoration: none;
+    padding-inline: 20px;
 }
 
 .navigation div {
     display: block;
     float: left;
-    padding: 1%;
-    font-size: 30px;
+    padding: 0.5%;
+    font-size: 20px;
     margin: 0;
     color: #38bda9;
     text-decoration: none;
@@ -43,8 +54,8 @@ body {
 }
 
 .navigation a:hover,  .navigation div:hover {
-    background-color: #ddd;
-    color: #0101016a;
+    background-color: #3a413c;
+    color: #acf0c8;
 }
 
 .navigation-dropdown div {
@@ -95,17 +106,30 @@ section {
     border-right: 2px solid #57645c;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+    margin-top: 5vh;
     width: 80%;
     display: flex;
+    flex-direction: column;
+    height: 75vh;
+    padding-inline: 50px;
+    align-items: flex-start;
     justify-content: center;
-    height: 500px;
 }
 
-#home > div {
+#home > h2 {
+    margin: 0px;
+    font-size: 90;
+    line-height: 70px;
+}
+
+#home > h2:first-child {
+    font-size: 45;
+}
+
+/* #home > div {
     display: flex;
     flex-direction: column;
-}
+} */
 
 #contact_me {
     margin-block: auto;
@@ -122,9 +146,8 @@ section {
 }
 
 .intruduction {
-    font-size: 45px;
-    color: #001107;
-    align-self: center;
+    font-size: 70px;
+    align-self: left;
 }
 
 .input-container {
@@ -138,7 +161,7 @@ section {
     padding: 20px;
 }
 
-.input-container > div {
+.input-container > form {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -176,7 +199,14 @@ input[name=massege] {
 footer {
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
     height: 125px;
+=======
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 55px;
+>>>>>>> 467a1b18492c4417faab0736510cb9e74eebf50d
     width: 100%;
     background-color: #0101016a;
     color: #2322506a;
@@ -184,8 +214,8 @@ footer {
 
 .footer-navigation {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 20px;
     padding-top: 20px;
     padding-left: 30px;
 }
@@ -198,8 +228,8 @@ footer {
 
 .contact {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 20px;
     color: #6CB2A6;
     font-size: 20px;
     padding-top: 20px;
