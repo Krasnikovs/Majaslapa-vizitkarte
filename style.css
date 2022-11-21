@@ -11,6 +11,13 @@ body {
     top: 0;
     right: 0;
     left: 0;
+    overflow: hidden;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.current-navigation {
+    background-color: #ddd;
+    color: #0101016a;
 }
 
 .navigation a {
