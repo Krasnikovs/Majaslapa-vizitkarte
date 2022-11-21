@@ -7,20 +7,10 @@ body {
 
 .navigation {
     background-color:  #212c25;
-<<<<<<< HEAD
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
-=======
-    overflow: hidden;
-    font-family: 'Noto Sans KR', sans-serif;
-}
-
-.current-navigation {
-    background-color: #ddd;
-    color: #0101016a;
->>>>>>> 467a1b18492c4417faab0736510cb9e74eebf50d
 }
 
 .navigation a {
@@ -199,14 +189,7 @@ input[name=massege] {
 footer {
     display: flex;
     justify-content: space-between;
-<<<<<<< HEAD
     height: 125px;
-=======
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 55px;
->>>>>>> 467a1b18492c4417faab0736510cb9e74eebf50d
     width: 100%;
     background-color: #0101016a;
     color: #2322506a;
