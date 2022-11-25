@@ -1,0 +1,231 @@
+body {
+    overflow: auto;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #9ebeb1;
+}
+
+.navigation {
+    background-color:  #212c25;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.current-navigation {
+    background-color: #ddd;
+    color: #0101016a;
+}
+
+.navigation a {
+    display: block;
+    float: left;
+    padding: 0.5%;
+    font-size: 20px;
+    margin: 0;
+    color: #38bda9;
+    text-decoration: none;
+    padding-inline: 20px;
+}
+
+.navigation div {
+    display: block;
+    float: left;
+    padding: 0.5%;
+    font-size: 20px;
+    margin: 0;
+    color: #38bda9;
+    text-decoration: none;
+}
+
+.navigation-dropdown {
+    font-size: 30px;
+    border: none;
+    color: #6CB2A6;
+    padding: 0;
+    background-color: inherit;
+    position: relative;
+}
+
+.navigation a:hover,  .navigation div:hover {
+    background-color: #3a413c;
+    color: #acf0c8;
+}
+
+.navigation-dropdown div {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10000;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    margin: 0;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.navigation-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    margin: 0;
+    height: 100vh;
+    overflow-y: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-snap-align: center;
+    scroll-snap-align: start;
+    padding: 3em;
+    height: calc(100vh -  6em);
+}
+
+#home {
+    margin-block: auto;
+    border-left: 2px solid #57645c;
+    border-right: 2px solid #57645c;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    padding-inline: 50px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#home > h2 {
+    margin: 0px;
+    font-size: 90;
+    line-height: 70px;
+}
+
+#home > h2:first-child {
+    font-size: 45;
+}
+
+/* #home > div {
+    display: flex;
+    flex-direction: column;
+} */
+
+#contact_me {
+    margin-block: auto;
+    border-left: 2px solid #57645c;
+    border-right: 2px solid #57645c;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.intruduction {
+    font-size: 70px;
+    align-self: left;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 70%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #283f30;
+    padding: 20px;
+}
+
+.input-container > form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input[type=text], button[value=Send] {
+    width: 100%;
+    padding: 12px 20px;
+    display: block;
+    border: none;
+    background: #9ebeb1;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;    
+}
+
+button[value=Send] {
+    background: #548571;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+input[type=text]:focus {
+    background-color: #a5d6c1;
+    outline: none;
+}
+
+input[name=massege] {
+    height: 50px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    height: 125px;
+    width: 100%;
+    background-color: #0101016a;
+    color: #2322506a;
+}
+
+.footer-navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.footer-navigation a {
+    color: #6CB2A6;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color: #6CB2A6;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-right: 100px;
+}
+
+.contact > p {
+    margin: 0;
+}
