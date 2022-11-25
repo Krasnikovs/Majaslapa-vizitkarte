@@ -68,25 +68,9 @@ try {
                             $stmt->bindParam('messege', $messege, PDO::PARAM_STR);
                             $stmt->execute();
                         }
-
-                        // var_dump($_POST);
-                        // $sqlsave = "INSERT INTO contact (subject, messege) VALUES ('$subject' ,'$massege')";
-                        // $conn->exec($sqlsave);
                     }
                 ?>
             </section>
         </main>
-        <!-- <footer>
-            <div class="footer-navigation">
-                <a href="index.html">Home</a>
-                <a href="about_me.html">About Me</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <div class="contact">
-                <p>Contact:</p>
-                <p>Email: ralis3333@gmail.com</p>
-                <p>Phone: 20247313</p>
-            </div>
-        </footer> -->
     </body>
 </html>
