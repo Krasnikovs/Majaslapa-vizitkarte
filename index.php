@@ -1,3 +1,19 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "porfolio";
+
+
+try {
+    $conn = new PDO('mysql:host='.$servername.';dbname='.$dbname, $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+?>
+
 <html>
     <head>
         <meta charset="UFT-8">
@@ -34,13 +50,30 @@
                 </div>
             </section>
             <section id="contact_me">
-                <div class="input-container">
+                <form method="POST" class="input-container">
                     <div>
-                        <input type="text" placeholder="Subject...">
-                        <input type="text" placeholder="Messege..." name="massege">
+                        <input type="text" placeholder="Subject..." name="subject">
+                        <input type="text" placeholder="Messege..." name="messege">
                     </div>
                     <button type="submit" value="Send">Send</button>
-                </div>
+                </form>
+                <?php
+                    if(!empty($_POST)) {
+                        $subject = $_POST["subject"];
+                        $messege = $_POST["messege"];
+
+                        if (isset($subject) && isset($messege)) {
+                            $stmt = $conn->prepare('INSERT INTO contact(subject, messege) VALUES (:subject, :messege)');
+                            $stmt->bindParam('subject', $subject, PDO::PARAM_STR);
+                            $stmt->bindParam('messege', $messege, PDO::PARAM_STR);
+                            $stmt->execute();
+                        }
+
+                        // var_dump($_POST);
+                        // $sqlsave = "INSERT INTO contact (subject, messege) VALUES ('$subject' ,'$massege')";
+                        // $conn->exec($sqlsave);
+                    }
+                ?>
             </section>
         </main>
         <!-- <footer>
