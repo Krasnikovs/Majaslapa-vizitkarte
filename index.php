@@ -1,12 +1,17 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "porfolio";
+ include "vendor/autoload.php";
+
+ use App\Database;
+
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "porfolio";
+
 
 
 try {
-    $conn = new PDO('mysql:host='.$servername.';dbname='.$dbname, $username, $password);
+    $conn = new PDO('mysql:host='.Database::SERVER_NAME.';dbname='.Database::DB_NAME, Database::USERNAME, Database::PASSWORD);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e) {
